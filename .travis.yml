@@ -1,0 +1,14 @@
+language: ruby
+rvm:
+  - 2.1.2
+before_install:
+  - "echo '--colour' > ~/.rspec"
+  - git config --global user.name 'Travis CI'
+  - git config --global user.email 'travis-ci@example.com'
+install:
+  - bundle install
+notifications:
+  email: false
+addons:
+  code_climate:
+    repo_token: 1b5f3befadb3b4fc64ead52b515e4fcf85e25e5e37b5306d84bc3c0688b79729 
